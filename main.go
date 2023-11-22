@@ -127,7 +127,8 @@ func main() {
 	// this is where tutorial end and my project begins
 	r.GET("api/v1/actor", getActor)
 	r.GET("api/v1/actor/:id", getActorById)
-	//r.GET("api/v1/actorname/:name", getActorById)
-
+	r.GET("api/v1/actorname/:name", getActorByName)
+	// Post end point to add actor
+	r.POST("api/v1/actor", addActor)
 	r.Run("localhost:6060")
 }
